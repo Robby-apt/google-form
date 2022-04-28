@@ -1,6 +1,9 @@
+/* Importing google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+/* General styling */
 * {
+	color: rgba(0, 0, 0, 0.8);
 	font-family: Roboto, sans-serif;
 	margin: 0;
 	padding: 0;
@@ -14,15 +17,41 @@ body {
 	min-height: 100vh;
 }
 
+/* Main body styling section*/
 .bodySection {
 	display: flex;
 	flex-direction: column;
 	margin: 0.625rem auto 0;
-	min-width: 280px;
+	/* min-width: 667.8px; */
 	width: 35%;
 	min-height: 100vh;
 }
 
+@media (max-width: 400px) {
+	.bodySection {
+		min-width: 280px;
+		width: 70%;
+		max-width: 415px;
+	}
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+	.bodySection {
+		min-width: 415px;
+		width: 70% !important;
+		max-width: 667.8px;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+	.bodySection {
+		min-width: 415px;
+		width: 35%;
+		max-width: 667.8px;
+	}
+}
+
+/* Intro section with info on the form */
 .titleSection {
 	background-color: #fff;
 	border-top: #673ab7 solid 0.625rem;
@@ -31,12 +60,18 @@ body {
 	padding: 0.625rem 1.25rem;
 }
 
+h1 {
+	font-weight: normal;
+	margin-bottom: 0.625rem;
+}
+
 hr {
 	color: rgba(0, 0, 0, 0.2);
 	margin: 0.625rem 0;
 	font-size: 0.125rem;
 }
 
+/* Main form area */
 form {
 	display: flex;
 	flex-direction: column;
@@ -55,6 +90,7 @@ form {
 	display: flex;
 }
 
+/* Personal info entry section */
 .nameInput,
 .emailInput {
 	flex-direction: column;
@@ -77,6 +113,7 @@ form {
 	border-left: none;
 }
 
+/* Confirmation of attendance and Booking of accommodation entry section styling */
 .confirmation,
 .accommodation {
 	flex-direction: column;
@@ -98,6 +135,7 @@ form {
 	margin-right: 1.25rem;
 }
 
+/* Form buttons section styling */
 .actionBtns {
 	display: flex;
 	justify-content: space-between;
@@ -113,6 +151,10 @@ form {
 	padding: 0.625rem 1.25rem;
 }
 
+.submitBtn:hover {
+	background-color: rgba(104, 58, 183, 0.9);
+}
+
 .clearBtn {
 	background: none;
 	border: none;
@@ -121,12 +163,20 @@ form {
 	padding: 0.625rem 1.25rem;
 }
 
+.clearBtn:hover {
+	background-color: rgba(104, 58, 183, 0.04);
+}
+/* Footer styling */
 .metaInfo {
 	color: rgba(0, 0, 0, 0.6);
 	display: flex;
 	flex-direction: column;
 	font-size: 0.75rem;
 	margin: auto 0 1.25rem;
+}
+
+.warning {
+	margin-bottom: 0.625rem;
 }
 
 .creator,
@@ -142,3 +192,5 @@ form {
 .brand {
 	font-size: 1.25rem;
 }
+
+/* Styling of filled radio inputs */

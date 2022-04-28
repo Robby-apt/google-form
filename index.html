@@ -10,6 +10,7 @@
 	</head>
 	<body>
 		<div class="bodySection">
+			<!-- Intro section with info on the form -->
 			<div class="titleSection">
 				<h1>WebDevTogether Annual Meetup</h1>
 				<p class="intro">
@@ -25,64 +26,76 @@
 				necessary arrangements
 				</p>
 			</div>
-		<form>
-		<div class="info inputSection">
-			<div class="nameInput">
-				<label for="#name">What is your name?</label>
-				<input type="text" id="name">
-			</div>
 
-			<div class="emailInput">
-				<label for="#email">Kindly enter your email.</label>
-				<input type="email" id="email">
-			</div>
-		</div>
+			<!-- Main form area -->
+			<form id="googleForm">
+				<!-- Personal info entry section -->
+				<div class="info inputSection">
+					<div class="nameInput">
+						<label for="#name">What is your name?</label>
+						<input type="text" id="name" required minlength="2">
+					</div>
 
-		<div class="confirmation inputSection">
-			<label for="">Will you be attending</label>
-			<div class="options">
-			<div class="choice">
-				<input type="checkbox">
-				<p>Yes. I'll be there</p>
-			</div>
-
-			<div class="choice">
-				<input type="checkbox">
-				<p>Yes. I'll be there but I'll be late</p>
-			</div>
-
-			<div class="choice">
-				<input type="checkbox">
-				<p>No. I'll not be there</p>
-			</div>
-			</div>
-		</div>
-
-		<div class="accommodation inputSection">
-			<label for="">Would you like us to organize accommodation for you?</label>
-			<div class="options">
-				<div class="choice">
-					<input type="checkbox">
-					<p>Yes please.</p>
+					<div class="emailInput">
+						<label for="#email">Kindly enter your email.</label>
+						<input type="email" id="email" required>
+					</div>
 				</div>
-	
-				<div class="choice">
-					<input type="checkbox">
-					<p>No. I'll organize my own accommodation</p>
-				</div>
-			</div>
-		</div>
 
-		<div class="actionBtns">
-			<button type="submit" class="submitBtn">Submit</button>
-			<button class="clearBtn">Clear form</button>
-		</div>
-		</form>
-		<div class="metaInfo">
-			<p class="warning">Never submit passwords through Google Forms.</p>
-			<p class="creator">This form was created by Robin.<a href="#">Report Abuse</a></p>
-			<p class="brand">Google Forms</p>
-		</div>
+				<!-- Confirmation of attendance entry section -->
+				<div class="confirmation inputSection">
+					<label for="">Will you be attending</label>
+					<div class="options">
+					<div class="choice">
+						<input type="radio" name="attendanceInput" id="yes" value="yes" required>
+						<label for="yes">Yes. I'll be there</label>
+					</div>
+
+					<div class="choice">
+						<input type="radio" name="attendanceInput" id="late" value="late">
+						<label for="late">Yes. I'll be there but I'll be late</label>
+					</div>
+
+					<div class="choice">
+						<input type="radio" name="attendanceInput" id="no" value="no">
+						<label for="no">No. I'll not be there</label>
+					</div>
+					</div>
+				</div>
+
+				<!-- Booking of accommodation entry section -->
+				<div class="accommodation inputSection">
+					<label for="">Would you like us to organize accommodation for you?</label>
+					<div class="options">
+						<div class="choice">
+							<input type="radio" name="accommodationInput" id="accommodationNo" value="no" required>
+							<label for="accommodationNo">Yes please.</label>
+						</div>
+			
+						<div class="choice">
+							<input type="radio" name="accommodationInput" id="accommodationYes" value="yes">
+							<label for="accommodationYes">No. I'll organize my own accommodation</label>
+						</div>
+					</div>
+				</div>
+
+				<!-- Form buttons section -->
+				<div class="actionBtns">
+					<button type="submit" class="submitBtn" id="submitBtn">Submit</button>
+					<button class="clearBtn" id="clearBtn">Clear form</button>
+				</div>
+			</form>
+
+			<!-- Footer section -->
+			<footer class="metaInfo">
+				<p class="warning">Never submit passwords through Google Forms.</p>
+				<p class="creator">This form was created by Robin.
+					<a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf55VjIUaPvODmUl06E19Y-LvQ4jCNsVhmPJ-KsUzb7-QAYXQ/reportabuse?source=https://docs.google.com/forms/d/e/1FAIpQLSf55VjIUaPvODmUl06E19Y-LvQ4jCNsVhmPJ-KsUzb7-QAYXQ/viewform?usp%3Dform_confirm" target="_blank">
+						Report Abuse
+					</a>
+				</p>
+				<h2 class="brand">Google Forms</h2>
+			</footer>
 		</div>
 		<script src="./main.js"></script>
 	</body>
