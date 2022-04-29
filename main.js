@@ -1,9 +1,11 @@
 // function to clear form
-function clearForm() {
-	const clearBtn = document.getElementById(`clearBtn`);
-	clearBtn.addEventListener('click', () => {
-		document.getElementById(`googleForm`).reset();
+const alertDiv = document.getElementById(`alert`);
+
+function displayAlert() {
+	const clearForm = document.getElementById(`clearForm`);
+	clearForm.addEventListener('click', () => {
+		alertDiv.style.display = `flex`;
 	});
 }
 
-clearForm();
+displayAlert();
